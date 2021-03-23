@@ -16,6 +16,7 @@ class CityWeather extends React.Component {
           if (Math.random(0, 1) < 0.1) throw new Error('How unfortunate! The API Request Failed')
           const { data } = response;
           this.setState({temp: data.main.temp, lat: data.coord.lat, lon: data.coord.lon})
+          console.log(this.state)
           return data;
         })
         .catch(error => {
