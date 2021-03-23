@@ -73,13 +73,20 @@
   <div class="info">
     <h1>weather-app</h1>
     <p>Version 1.0.0</p>
-    <h3><a href="/weather/Santiago">Santiago (CL)</a></h3>
-    <h3><a href="/weather/Zurich">Zurich (CH)</a></h3>
-    <h3><a href="/weather/Auckland">Auckland (NZ)</a></h3>
-    <h3><a href="/weather/Sidney">Sydney (AU)</a></h3>
-    <h3><a href="/weather/London">Londres (UK)</a></h3>
-    <h3><a href="/weather/Georgia">Georgia (US)</a></h3>
+    <div id="city-list"></div>
   </div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/babel" src="/components/CityList.js"></script>
+  <script type="text/babel" src="/components/CityWeather.js"></script>
+
+
+  <script type="text/babel">
+    ReactDOM.render(<CityList />, document.querySelector("#city-list"));
+  </script>
 
   <footer class="power">
     <a href="https://loopback.io" target="_blank">
